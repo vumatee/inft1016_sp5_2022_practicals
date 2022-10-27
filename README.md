@@ -55,3 +55,7 @@ def foo():
     if not bar:
         return True
 ```
+
+![This is a scary image!](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kismet-IMG_6007-black.jpg/800px-Kismet-IMG_6007-black.jpg)
+
+[Here's a link!](https://commons.wikimedia.org/wiki/File:Kismet-IMG_6007-black.jpg)
