@@ -14,12 +14,18 @@
         function changeTheme() {
             const toggleTheme = document.getElementById("changeTheme");
            
+            
+            
             if (toggleTheme.getAttribute("data-theme") == "dark") {
                 toggleTheme.setAttribute("data-theme","light");
+                window.localStorage.setItem()
             }
             else {
                 toggleTheme.setAttribute("data-theme","dark");
+                localStorage.setItem("data-theme","dark")
             }
+
+            
         }
 
         function queryString() {
@@ -75,8 +81,6 @@
 
     <main>      
 
-        <div class = box>
-            
         <article>        
             
             <h2>Introduction</h2>        
@@ -136,10 +140,6 @@
                 <p>The new demand for workers to work from home due to the COVID-19 pandemic has spawned a plethora of new security vulnerabilities and risks in the form of cyber-attacks. These attacks take advantage of mistakes caused by employees already under pandemic stress, to access confidential information in a new work setting. These risks can be mitigated by improving the workforce’s cybersecurity awareness via training, advising the utilisation of proper security measures such as VPNs and regular password reviews. An informed support department dedicated to dealing with such threats will also greatly reduce the risk of having sensitive data accessed unlawfully.</p>
          </article>
 
-        </div>
-
-        <div class="box">
-
         <aside>        
         
         <h2>Related</h2>        
@@ -153,8 +153,6 @@
         </ul>      
 
         </aside> 
-        
-        </div>
 
     </main>    
 

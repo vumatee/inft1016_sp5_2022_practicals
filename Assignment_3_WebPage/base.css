@@ -60,9 +60,3 @@
  header, h1, form {
     text-align: center;
  }
-
- .box {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
- }
