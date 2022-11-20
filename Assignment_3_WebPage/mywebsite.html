@@ -18,14 +18,13 @@
             
             if (toggleTheme.getAttribute("data-theme") == "dark") {
                 toggleTheme.setAttribute("data-theme","light");
-                window.localStorage.setItem()
+                window.localStorage.setItem("userPref","light");
             }
             else {
                 toggleTheme.setAttribute("data-theme","dark");
-                localStorage.setItem("data-theme","dark")
+                window.localStorage.setItem("userPref","dark");
             }
 
-            
         }
 
         function queryString() {
@@ -39,7 +38,24 @@
             var output = "Hello " + userName + "!";
             var element = document.getElementById("userNameInput");
             element.innerHTML = output;
-            var newPlaceholder
+            
+        }
+
+        function checkUserPref() {
+            const toggleTheme = document.getElementById("changeTheme");
+            const userPref = window.localStorage.getItem("userPref");
+            toggleTheme.setAttribute("data-them","userPref");
+
+            if (toggleTheme.getAttribute("data-theme") == "dark") {
+                toggleTheme.setAttribute("data-theme","dark");
+            }
+            else {
+                toggleTheme.setAttribute("data-theme","light");
+            }
+
+        }
+
+        function encryptPic() {
             
         }
         
@@ -47,7 +63,7 @@
 
 </head>  
 
-<body id="changeTheme" onload="queryString()">    
+<body id="changeTheme" onload="queryString()" onload="checkUserPref()">    
     
     <header>      
     
@@ -75,9 +91,17 @@
         </form>     
     
     <h3 id="userNameInput">Hi!</h3>
-    </nav>    
 
     
+    </nav>    
+
+    <div>
+
+    <img src="https://c8.alamy.com/zooms/9/99e86af6014345e88945088cc1c68c14/2c7ybnr.jpg"></img>
+    
+    <figcaption>Scary hacker by Di Studio Photography/Alarmy Stock Photos</figcaption>
+
+    </div>
 
     <main>      
 
@@ -100,6 +124,8 @@
                     <p>Understandably, the data collected can contain sensitive information, especially in a government organisation, or perhaps banking details. Such data are often collected only with consent from all parties and are then protected by the process of encryption.</p>        
 
                     <p>There exists a plethora of encryption methods, however, most modern encryptions rely largely on mathematics, to transform a piece of data into indistinguishable bits of data that are made to look random and insignificant. The process usually utilises a randomly generated master key that is used to decode the encoded data into the original (M. S. Mehmood et al. 2019), allowing only authorised users access to the data. Many encryption standards exist, and new methods are constantly being developed with great effort, similar to that of an arms race. All this is necessary to protect sensitive data from the ever-increasing threat of bad actors and hackers, who work just as hard to bypass these security measures.</p>        
+
+                    <button id = "encrypt" onclick="encryptPic()">Encryption Visual Aid</button>
 
             <h2>Cyber Danger</h2>    
             
