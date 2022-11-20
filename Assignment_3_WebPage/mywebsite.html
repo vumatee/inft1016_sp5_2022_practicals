@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="base.css">    
 
     <script>
+        
+        function changeTheme() {
+            const currentTheme = document.createElement("data-theme");
 
+            currentTheme.setAttribute("data-theme","dark")
+        }
+
+        
     </script>  
 
 </head>  
@@ -21,7 +28,7 @@
     
         <h1>Header</h1>      
 
-        <button onclick="">Toggle Theme</button>    
+        <button id = "themeButton" onclick="changeTheme()">Toggle Theme</button>    
 
     </header>    
 

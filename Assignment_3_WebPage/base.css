@@ -1,0 +1,39 @@
+:root {
+    --primary-color: rgb(163, 210, 202);
+    --secondary-color: rgb(255, 255, 255);
+    --bg-color: rgb(232, 222, 210);
+    --font-color: rgb(5, 102, 118);
+    --heading-color: rgb(94, 170, 168);
+}
+
+[data-theme="dark"] {
+     --primary-color: rgb(0, 0, 0);
+     --secondary-color: rgb(62, 44, 65);
+     --bg-color: rgb(38, 28, 44);
+     --font-color: rgb(110, 133, 178);
+     --heading-color: rgb(92, 82, 127);
+ }
+
+[data-theme="light"] {
+    --primary-color: rgb(163, 210, 202);
+    --secondary-color: rgb(255, 255, 255);
+    --bg-color: rgb(232, 222, 210);
+    --font-color: rgb(5, 102, 118);
+    --heading-color: rgb(94, 170, 168);
+}
+
+ body {
+    background-color: var(--bg-color);
+ }
+
+ h1, h2, h3 {
+    color: var(--heading-color);
+ }
+
+ main, footer {
+    color: var(--font-color);
+ }
+
+ a:link {
+    color: var(--primary-color);
+ }
