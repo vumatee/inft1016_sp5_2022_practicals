@@ -5,28 +5,47 @@
     
     <meta charset="utf-8">    
 
-    <title>My page title</title>    
+    <title>Cybersafety 101</title>    
 
     <link rel="stylesheet" href="base.css">    
 
     <script>
         
         function changeTheme() {
-            const currentTheme = document.createElement("data-theme");
-
-            currentTheme.setAttribute("data-theme","dark")
+            const toggleTheme = document.getElementById("changeTheme");
+           
+            if (toggleTheme.getAttribute("data-theme") == "dark") {
+                toggleTheme.setAttribute("data-theme","light");
+            }
+            else {
+                toggleTheme.setAttribute("data-theme","dark");
+            }
         }
 
+        function queryString() {
+            const userInput = window.location.search;
+            console.log(userInput);
+
+            const urlParams = new URLSearchParams(userInput);
+            const userName = urlParams.get("user_name");
+            console.log(userName);
+
+            var output = "Hello " + userName + "!";
+            var element = document.getElementById("userNameInput");
+            element.innerHTML = output;
+            var newPlaceholder
+            
+        }
         
     </script>  
 
 </head>  
 
-<body>    
+<body id="changeTheme" onload="queryString()">    
     
     <header>      
     
-        <h1>Header</h1>      
+        <h1>Data Safety Basics</h1>      
 
         <button id = "themeButton" onclick="changeTheme()">Toggle Theme</button>    
 
@@ -48,33 +67,81 @@
             <button type="submit">Apply!</button>       
 
         </form>     
-
+    
+    <h3 id="userNameInput">Hi!</h3>
     </nav>    
 
-    <main>      
     
+
+    <main>      
+
+        <div class = box>
+            
         <article>        
             
-            <h2>Article heading</h2>        
+            <h2>Introduction</h2>        
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>        
+                <p>Technology is a constantly advancing field that is largely responsible for changes to our everyday routine. Society is in the midst of transitioning from operating via physical, materialistic means, conducting business face to face, into having online businesses and digitalised payment systems. These advancements were spearheaded from a need to reduce physical contact, a major infection vector of the novel COVID-19 pandemic (Borkovich DJ, Skovira, RJ 2020). Having important documents, bank details and the ability to pay by just using your personal device is a huge convenience. Businesses has also taken advantage of this opportunity by implementing work from home models, allowing for global employment. These changes do not come without drawbacks however, as with every new innovation, there are always new associated risks, most commonly, in the form of data leakage.</p>        
 
-            <h3>Subsection</h3>        
+            <h2>Data Privacy and Security</h2>
+            
+                <h3>What is Data?</h3>
 
-            <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>        
+                    <p>Data is an umbrella term used to refer to information, ranging from unstructured complex computer input to credit card numbers and addresses. Raw information is often collected with a goal in mind, for example, a bank may collect their client’s personal details and spendings, while a marketer might be interested in the buying habits of a demographic. This information is then interpreted and processed into meaningful data.</p>
 
-            <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>        
+                    <p>This data is then categorised and stored by the owner, often in a database for future use. The data can be readily accessed and utilised to perform evaluation or is directly tied into a business’ operations. The owner of the data may also choose to share and allow third parties to access the information legally. Once the data has remained unused for a set period of time, it is usually destroyed, to allow vacancy for more data and other security reasons (P. Ravi Kumar et al. 2017). </p>
+            
+                <h3>Data Encryption</h3>        
 
-            <h3>Another subsection</h3>        
+                    <p>Understandably, the data collected can contain sensitive information, especially in a government organisation, or perhaps banking details. Such data are often collected only with consent from all parties and are then protected by the process of encryption.</p>        
 
-            <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>        
+                    <p>There exists a plethora of encryption methods, however, most modern encryptions rely largely on mathematics, to transform a piece of data into indistinguishable bits of data that are made to look random and insignificant. The process usually utilises a randomly generated master key that is used to decode the encoded data into the original (M. S. Mehmood et al. 2019), allowing only authorised users access to the data. Many encryption standards exist, and new methods are constantly being developed with great effort, similar to that of an arms race. All this is necessary to protect sensitive data from the ever-increasing threat of bad actors and hackers, who work just as hard to bypass these security measures.</p>        
 
-            <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>      
+            <h2>Cyber Danger</h2>    
+            
+                <p>Sensitive data such as home address or bank credentials can be exploited to their victim’s detriment if fallen into the wrong hands. Individuals seeking to manipulate such data are known as black hat hackers. Hackers take advantage of weaknesses in the form of hardware, software, and human errors, to obtain data for, majority of the time, financial gains. The recent influx of sensitive data being generated due to the COVID-19 pandemic, has forced the digitalisation of such information. Organisations has also adapted to utilising work from home hybrid models for their employees, in an attempt to reduce the spread of infection. While a great solution in response to the pandemic, the move effectively created new data security vulnerabilities and placing these employees directly in the crosshair of bad actors.</p>
 
-        </article>      
+                <h3>Phishing for Information</h3>
+
+                    <p>In a workplace setting, there are usually several cybersecurity measures in place to protect the data they work with. These include automatic spam email filters, encrypted internet connections, firewalls and antivirus software, luxuries that often, not available to workers working from home. The weakest element of a security system is the humans that is using it, and hackers have a plethora of methods to exploit this weakness.</p>
+            
+                    <p>One way to gain access to unprotected sensitive data is with authorised login credentials. Hackers can obtain this information through a process known as phishing (Alabdan, R., 2020). First, the hacker casts a net out in the form of spam emails, embedded with a read receipt, to a massive list of email addresses, generated from a script or program. Once the email is opened, the email address is then flagged as an active account and is then added onto the list of potential targets. </p>        
+
+                    <p>Now the hacker can find out more information about the owner of the email address, their social media for example, to extract information such as services they are subscribed to, or who they bank with. Another email, crafted to impersonate that of a bank, or subscription service will be sent to the unsuspecting victim, tricking them into handing over their personal data and login credentials to the hacker. However, merely using an email filter will be able to significantly reduce the risk of such an attack.</p>      
+
+                <h3>Weak Passwords</h3>
+
+                    <p>Sometimes, a hacker doesn’t have to go too far to obtain access to an account, because weak passwords are extremely common. People often chooses short words that are easy to remember and has significance to them as their passwords. These passwords are extremely easy to crack by a hacker using a brute force program, where a script attempts to login to a victim’s account, using a systematically generated password guess repeatedly until successful. Countermeasures such as a password generator and managers are able to mitigate the risk of such an attack, by generating complex passwords and managing them for the user. Although this introduces another risk in the form of losing the physical validation key, the solution has been slowly gaining popularity.</p>
+
+                <h3>Unsecured Connections</h3>
+
+                    <p>Employees are often required to connect remotely to work servers and databases to perform their role, introducing another vulnerability when working from home. Internet connections such as public or even home Wi-Fi can often be manipulated by hackers. Public Wi-Fi in places such as coffee shops or libraries are usually unsecured, allowing for hackers to position themselves between the connection point and the worker. This allows the hacker to obtain all data such as logins and credentials input by the user, then passing it onto the end point so that everything appears to be in order. </p>
+        
+                    <p>Wi-Fi connection points also allows file sharing between devices, allowing the hacker to distribute malicious software, aimed at taking control of infected devices. These unsecured connections are also at risk of being programmed to automatically distribute malware to users who connects to them. </p>
+        
+                    <p>Work from home employees who wishes to utilise connections in such environments can employ the use of a Virtual Private Network. The technology encrypts any data that the user may transmit to the connection point (Abhijith MS, Senthilvadivu K, 2020), rendering them too time consuming and effectively pointless for the middleman to decode. However, the safest approach still is to use a secured wired connection when working from home. </p>
+        
+                <h3>Environmental Risk Factors</h3>
+
+                    <p>A strong password and a VPN is futile however, if the hacker can see the screen directly. A hacker might take the opportunity to peek over a worker’s shoulder, while they’re on public transport for example, and gain knowledge of sensitive data, possibly login credentials. Devices used to work from home must also be secured from being physically compromised via displacement or theft (Borkovich DJ, Skovira, RJ 2020). When working in a public setting, the use of a privacy screen is highly recommended to protect data from privy eyes.</p>
+        
+                    <p>Some work from home employees prefers to do “clock on” in public environment such as cafes and libraries, introducing them to physical risks that has potential to compromise sensitive data. This also includes proper disposal of storage devices and files when no longer needed, data can be reconstructed using fragments left over from the deletion process.</p>
+       
+                <h3>Cybersecurity awareness training</h3>
+                
+                    <p>These threats are not widely known, despite how prevalent they are in current times. Proper cybersecurity awareness training must be given to employees (Norris et al., 2019), to inform them of the increased level of threat since the start of the pandemic. Regular emails to update employees on emerging threats and trends are also vital to keep the workforce informed and vigilant.</p>
+       
+            <h2>Short Summary</h2>
+
+                <p>The new demand for workers to work from home due to the COVID-19 pandemic has spawned a plethora of new security vulnerabilities and risks in the form of cyber-attacks. These attacks take advantage of mistakes caused by employees already under pandemic stress, to access confidential information in a new work setting. These risks can be mitigated by improving the workforce’s cybersecurity awareness via training, advising the utilisation of proper security measures such as VPNs and regular password reviews. An informed support department dedicated to dealing with such threats will also greatly reduce the risk of having sensitive data accessed unlawfully.</p>
+         </article>
+
+        </div>
+
+        <div class="box">
 
         <aside>        
-    
+        
         <h2>Related</h2>        
 
         <ul>          
@@ -85,7 +152,9 @@
             <li><a href="#">Oh well...</a></li>        
         </ul>      
 
-        </aside>    
+        </aside> 
+        
+        </div>
 
     </main>    
 

@@ -7,7 +7,7 @@
 }
 
 [data-theme="dark"] {
-     --primary-color: rgb(0, 0, 0);
+     --primary-color: rgb(144, 64, 160);
      --secondary-color: rgb(62, 44, 65);
      --bg-color: rgb(38, 28, 44);
      --font-color: rgb(110, 133, 178);
@@ -21,13 +21,25 @@
     --font-color: rgb(5, 102, 118);
     --heading-color: rgb(94, 170, 168);
 }
-
+ 
  body {
     background-color: var(--bg-color);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
  }
 
  h1, h2, h3 {
     color: var(--heading-color);
+    text-align: left;
+ }
+
+ h3 {
+    font-style: italic;
+ }
+
+ h3#userNameInput {
+    text-align: center;
  }
 
  main, footer {
@@ -36,4 +48,21 @@
 
  a:link {
     color: var(--primary-color);
+ }
+
+ nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+} 
+ 
+ header, h1, form {
+    text-align: center;
+ }
+
+ .box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
  }
