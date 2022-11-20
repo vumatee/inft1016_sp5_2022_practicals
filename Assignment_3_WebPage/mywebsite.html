@@ -64,8 +64,8 @@
         }
 
         function phishPic() {
-            document.getElementById("phish").src = "https://www.raynetech.com/images/easyblog_articles/67/phishing.jpg"
-            var caption = "Hacker Hoping You'll Take the Bait courtesy of Rayne Technology Solutions (CC-by-NC)";
+            document.getElementById("phish").src = "https://static.wixstatic.com/media/cf3054_721d2ff44c314343a76c5cae5cde2e4e~mv2.png/v1/fill/w_740,h_593,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/cf3054_721d2ff44c314343a76c5cae5cde2e4e~mv2.png"
+            var caption = "Hacker Hoping You'll Take the Bait courtesy of New Jersey Cybersecurity & Communications (CC-by-NC)";
             var element = document.getElementById("phishCaption");
             element.innerHTML = caption;
             
@@ -139,6 +139,8 @@
 
     </div>
 
+    <div class="border">
+
     <main>      
 
         <article>        
@@ -163,9 +165,13 @@
 
                     <button onclick="encryptPic()">A Diagram of the Process</button>
 
+                    <div>
+
                     <img id = "encrypt"></img>
 
                     <p id="encryptCaption"></p>
+
+                    </div>
 
             <h2>Cyber Danger</h2>    
             
@@ -181,19 +187,27 @@
 
                     <button onclick="phishPic()">"Phishing"</button>
 
+                    <div>
+
                     <img id = "phish"></img>
 
                     <p id="phishCaption"></p>
                 
+                    </div>
+
                     <h3>Weak Passwords</h3>
 
                     <p>Sometimes, a hacker doesn’t have to go too far to obtain access to an account, because weak passwords are extremely common. People often chooses short words that are easy to remember and has significance to them as their passwords. These passwords are extremely easy to crack by a hacker using a brute force program, where a script attempts to login to a victim’s account, using a systematically generated password guess repeatedly until successful. Countermeasures such as a password generator and managers are able to mitigate the risk of such an attack, by generating complex passwords and managing them for the user. Although this introduces another risk in the form of losing the physical validation key, the solution has been slowly gaining popularity.</p>
 
                     <button onclick="passwordPic()">Check your password strength!</button>
 
+                    <div>
+
                     <img id = "password"></img>
 
                     <p id="passwordCaption"></p>
+
+                    </div>
 
                 <h3>Unsecured Connections</h3>
 
@@ -238,21 +252,9 @@
                 <p>The new demand for workers to work from home due to the COVID-19 pandemic has spawned a plethora of new security vulnerabilities and risks in the form of cyber-attacks. These attacks take advantage of mistakes caused by employees already under pandemic stress, to access confidential information in a new work setting. These risks can be mitigated by improving the workforce’s cybersecurity awareness via training, advising the utilisation of proper security measures such as VPNs and regular password reviews. An informed support department dedicated to dealing with such threats will also greatly reduce the risk of having sensitive data accessed unlawfully.</p>
          </article>
 
-        <aside>        
-        
-        <h2>Related</h2>        
-
-        <ul>          
-            <li><a href="#">Oh I do like to be beside the seaside</a></li>          
-            <li><a href="#">Oh I do like to be beside the sea</a></li>          
-            <li><a href="#">Although in the North of England</a></li>          
-            <li><a href="#">It never stops raining</a></li>          
-            <li><a href="#">Oh well...</a></li>        
-        </ul>      
-
-        </aside> 
-
     </main>    
+
+    </div>
 
     <footer>      
     

@@ -47,6 +47,10 @@
  }
 
  a:link {
+    color: var(--font-color);
+ }
+
+ a:hover {
     color: var(--primary-color);
  }
 
@@ -55,6 +59,13 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
+    border-style: double;
+    border-color: var(--primary-color);
+    border-width: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
  } 
  
  header, h1, form {
@@ -75,4 +86,20 @@ img, div {
 
  p#encryptCaption, p#phishCaption, p#passwordCaption, p#peepCaption, p#secureCaption {
     text-align: center;
+ }
+
+ .border {
+    border-style: double;
+    border-color: var(--primary-color);
+    border-width: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+ }
+
+ figcaption {
+    color: var(--font-color);
+    padding-top: 20px;
+    padding-bottom: 30px;
  }
