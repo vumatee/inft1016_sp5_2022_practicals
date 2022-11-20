@@ -56,6 +56,42 @@
         }
 
         function encryptPic() {
+            document.getElementById("encrypt").src = "https://www.thepsi.com/wp-content/uploads/2019/12/Is-Your-Cloud-Data-Protected-inner.jpg"
+            var caption = "Data Encryption Process courtesy of www.thepsi.com (CC-by-NC)";
+            var element = document.getElementById("encryptCaption");
+            element.innerHTML = caption;
+            
+        }
+
+        function phishPic() {
+            document.getElementById("phish").src = "https://www.raynetech.com/images/easyblog_articles/67/phishing.jpg"
+            var caption = "Hacker Hoping You'll Take the Bait courtesy of Rayne Technology Solutions (CC-by-NC)";
+            var element = document.getElementById("phishCaption");
+            element.innerHTML = caption;
+            
+        }
+
+        function passwordPic() {
+            document.getElementById("password").src = "https://preview.redd.it/5g3ayy7pwxl51.jpg?width=640&crop=smart&auto=webp&s=5a84f7d59041b3d3006fa4f6c8c2c4e7a5d1bc48"
+            var caption = "How Long Does It Take To Crack You Password? courtesy of Hive Systems (CC-by-NC)";
+            var element = document.getElementById("passwordCaption");
+            element.innerHTML = caption;
+            
+        }
+
+        function peepPic() {
+            document.getElementById("peep").src = "https://static.businessworld.in/quickbyte/quickbytes_extralarge_image/1492584372_15ySn2_3-Peeping-into-someones-computer-shutterstock_470.jpg"
+            var caption = "Be Wary of Peeping Toms! provided by BW Businessworld (CC-by-NC)";
+            var element = document.getElementById("peepCaption");
+            element.innerHTML = caption;
+            
+        }
+
+        function securePic() {
+            document.getElementById("secure").src = "https://www.bncsystems.com/wp-content/uploads/2022/08/Security-Pyramid.png"
+            var caption = "A Small Guide to IT Security courtesy of BNC Systems Dallas (CC-by-NC)";
+            var element = document.getElementById("secureCaption");
+            element.innerHTML = caption;
             
         }
         
@@ -125,7 +161,11 @@
 
                     <p>There exists a plethora of encryption methods, however, most modern encryptions rely largely on mathematics, to transform a piece of data into indistinguishable bits of data that are made to look random and insignificant. The process usually utilises a randomly generated master key that is used to decode the encoded data into the original (M. S. Mehmood et al. 2019), allowing only authorised users access to the data. Many encryption standards exist, and new methods are constantly being developed with great effort, similar to that of an arms race. All this is necessary to protect sensitive data from the ever-increasing threat of bad actors and hackers, who work just as hard to bypass these security measures.</p>        
 
-                    <button id = "encrypt" onclick="encryptPic()">Encryption Visual Aid</button>
+                    <button onclick="encryptPic()">A Diagram of the Process</button>
+
+                    <img id = "encrypt"></img>
+
+                    <p id="encryptCaption"></p>
 
             <h2>Cyber Danger</h2>    
             
@@ -139,9 +179,21 @@
 
                     <p>Now the hacker can find out more information about the owner of the email address, their social media for example, to extract information such as services they are subscribed to, or who they bank with. Another email, crafted to impersonate that of a bank, or subscription service will be sent to the unsuspecting victim, tricking them into handing over their personal data and login credentials to the hacker. However, merely using an email filter will be able to significantly reduce the risk of such an attack.</p>      
 
-                <h3>Weak Passwords</h3>
+                    <button onclick="phishPic()">"Phishing"</button>
+
+                    <img id = "phish"></img>
+
+                    <p id="phishCaption"></p>
+                
+                    <h3>Weak Passwords</h3>
 
                     <p>Sometimes, a hacker doesn’t have to go too far to obtain access to an account, because weak passwords are extremely common. People often chooses short words that are easy to remember and has significance to them as their passwords. These passwords are extremely easy to crack by a hacker using a brute force program, where a script attempts to login to a victim’s account, using a systematically generated password guess repeatedly until successful. Countermeasures such as a password generator and managers are able to mitigate the risk of such an attack, by generating complex passwords and managing them for the user. Although this introduces another risk in the form of losing the physical validation key, the solution has been slowly gaining popularity.</p>
+
+                    <button onclick="passwordPic()">Check your password strength!</button>
+
+                    <img id = "password"></img>
+
+                    <p id="passwordCaption"></p>
 
                 <h3>Unsecured Connections</h3>
 
@@ -157,10 +209,30 @@
         
                     <p>Some work from home employees prefers to do “clock on” in public environment such as cafes and libraries, introducing them to physical risks that has potential to compromise sensitive data. This also includes proper disposal of storage devices and files when no longer needed, data can be reconstructed using fragments left over from the deletion process.</p>
        
-                <h3>Cybersecurity awareness training</h3>
+                    <button onclick="peepPic()">What is a common overlooked danger?</button>
+
+                    <div>
+
+                    <img id = "peep"></img>
+
+                    <p id="peepCaption"></p>
+
+                    </div>
+                
+                    <h3>Cybersecurity awareness training</h3>
                 
                     <p>These threats are not widely known, despite how prevalent they are in current times. Proper cybersecurity awareness training must be given to employees (Norris et al., 2019), to inform them of the increased level of threat since the start of the pandemic. Regular emails to update employees on emerging threats and trends are also vital to keep the workforce informed and vigilant.</p>
        
+                    <button onclick="securePic()">Appropriate Defensive Manuevers</button>
+
+                    <div>
+
+                    <img id = "secure"></img>
+
+                    <p id="secureCaption"></p>
+
+                    </div>
+
             <h2>Short Summary</h2>
 
                 <p>The new demand for workers to work from home due to the COVID-19 pandemic has spawned a plethora of new security vulnerabilities and risks in the form of cyber-attacks. These attacks take advantage of mistakes caused by employees already under pandemic stress, to access confidential information in a new work setting. These risks can be mitigated by improving the workforce’s cybersecurity awareness via training, advising the utilisation of proper security measures such as VPNs and regular password reviews. An informed support department dedicated to dealing with such threats will also greatly reduce the risk of having sensitive data accessed unlawfully.</p>

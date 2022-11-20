@@ -68,7 +68,11 @@
     text-align: center;
  }
 
-div {
+img, div {
     text-align: center;
     font-style: italic;
+ }
+
+ p#encryptCaption, p#phishCaption, p#passwordCaption, p#peepCaption, p#secureCaption {
+    text-align: center;
  }
