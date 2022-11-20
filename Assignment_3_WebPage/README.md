@@ -27,12 +27,15 @@ Using the base code provided for the assignment, I'm going to convert the report
 I will rank features that I've had difficulty implementing, with 1 being the hardest.
 
 1. **Persisten user preferences (local storage).**
+
 I found this extremely challenging, I've tried multiple external resources in combination with the link provided in the assignment to no avail. Could not wrap my head around how to do this.
 
 2. **Toggling between light and dark mode interchangably.**
+
 The most challenging part of this was learning how different commands worked and implementing if and else statements.
 
 3. **Name query**
+
 This I found to be somewhat difficult but after some research, I was able to get my codes to work.
 
 
